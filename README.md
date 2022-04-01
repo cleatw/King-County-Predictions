@@ -76,7 +76,7 @@ Looking forward, we would like to incorporate the following into our model as we
 │   ├── model2_Logan_ROI.png
 │   ├── model2_Port Saint Joe_ROI.png
 │   └── model2_Stapleton_ROI.png
-├── Notebooks                                     # Jupyter Notebook containing our work
+├── Notebooks                                     # Jupyter Notebooks containing our work
 │   ├── src
 ├──── timeseries_project.py
 │   ├── Initial_EDA.ipynb
