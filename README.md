@@ -49,3 +49,38 @@ Looking forward, we would like to incorporate the following into our model as we
 - The market volume 
 - Operating costs and overheads
 - Using the second model or recommended third model with autoarima methods.
+
+## File Structure
+```
+.
+├── 00_Source_Data
+│   └── zillow_data.csv
+├── Data
+│   ├── Cities.csv
+│   ├── Counties.csv
+│   ├── Metros.csv
+│   ├── States.csv
+│   └── Zips.csv
+├── Deliverables
+│   ├── Final_Notebook.pdf
+│   └── Presentation.pdf
+├── Figures
+│   ├── 178b9290b3d3016ae511d862d0620987.png
+│   ├── model1_Bear_ROI.png
+│   ├── model1_Claymont_ROI.png
+│   ├── model1_New Castle_ROI.png
+│   ├── model1_Newport_ROI.png
+│   ├── model1_Wilmington_ROI.png
+│   ├── model2_Fairhope_ROI.png
+│   ├── model2_Foley_ROI.png
+│   ├── model2_Logan_ROI.png
+│   ├── model2_Port Saint Joe_ROI.png
+│   └── model2_Stapleton_ROI.png
+├── Notebooks
+│   ├── src
+├──── timeseries_project.py
+│   ├── Initial_EDA.ipynb
+│   └── ROI Analysis.ipynb
+├── .gitignore
+└── README.md
+```
