@@ -53,18 +53,18 @@ Looking forward, we would like to incorporate the following into our model as we
 ## File Structure
 ```
 .
-├── 00_Source_Data
+├── 00_Source_Data                                # Original Source Data Folder
 │   └── zillow_data.csv
-├── Data
+├── Data                                          # Modified (cleaned) Data Folder
 │   ├── Cities.csv
 │   ├── Counties.csv
 │   ├── Metros.csv
 │   ├── States.csv
 │   └── Zips.csv
-├── Deliverables
+├── Deliverables                                  # PDF of both our Notebook and our Presentation
 │   ├── Final_Notebook.pdf
 │   └── Presentation.pdf
-├── Figures
+├── Figures                                       # Images generated and used for Presentation
 │   ├── 178b9290b3d3016ae511d862d0620987.png
 │   ├── model1_Bear_ROI.png
 │   ├── model1_Claymont_ROI.png
@@ -76,7 +76,7 @@ Looking forward, we would like to incorporate the following into our model as we
 │   ├── model2_Logan_ROI.png
 │   ├── model2_Port Saint Joe_ROI.png
 │   └── model2_Stapleton_ROI.png
-├── Notebooks
+├── Notebooks                                     # Jupyter Notebook containing our work
 │   ├── src
 ├──── timeseries_project.py
 │   ├── Initial_EDA.ipynb
