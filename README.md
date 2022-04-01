@@ -3,14 +3,17 @@ Timi, Brian, Tim's phase 4 Flatiron Project
 
 # LOCATION FORECASTING USING TIME SERIES FORECASTING
 
-![](Figures/178b9290b3d3016ae511d862d0620987.png)
+![Ovation Logo](Figures/178b9290b3d3016ae511d862d0620987.png)
 
 
 ## STAKEHOLDER AND BUSINESS UNDERSTANDING 
-Our firm, BTT Consulting has been hired by a real estate property company, OVATION REAL ESTATE. They are looking to invest in five new locations around the country. They want locations that assure them of immediate profitability and return on investment. We are focusing on the average return on investment of properties to arrive at our recommended locations.
+Our firm, BTT Consulting has been hired by a real estate property company, OVATION REAL ESTATE. They are looking to invest in five(5) new locations 
+around the country. They want locations that assure them of immediate profitability and return on investment. We are focusing on the average return on investment of properties to arrive at our recommended locations.
 
 ## DATA  &  DATA ANALYSIS
-We are making use of Zillow Research data sourced from the Zillow website. The dataset encompasses mean monthly property values in close to 15,000 zip codes spread around the country from April, 1996 up to April, 2018. We aggregated the data by quarter to arrive at the return on investment (ROI) over each quarter. Making use of quarterly Returns on Investment, we were able to arrive at first, the state with the highest ROI, then we narrowed it down to 
+We are making use of Zillow Research data sourced from the Zillow website. The dataset encompasses mean monthly property values in close to 15,000 
+zip codes spread around the country from April, 1996 up to April, 2018. We aggregated the data by quarter to arrive at the return on investment (ROI) over 
+each quarter. Making use of quarterly Returns on Investment, we were able to arrive at first, the state with the highest ROI, then we narrowed it down to 
 metro, county and finally the best performing cities.  
 
 ## MODELING
@@ -18,17 +21,17 @@ We carried out the bulk of our analyses using Time Series forecasting.
 
 ### Baseline Model
 Our baseline model was a Naive Forecast, which was merely a carry-over of the current values of property into the next quarter. This model assumes all
-conditions remaining constant, the present mean values we had in our dataset will remain unchanged over the next fiscal quarter. Using Root Mean Square error as our metric of choice, we had a value of 0.0103 (1.03%) for this model. This model did not satisfy our questions concerning volatility in the real estate sector.
+conditions remaining constant, the present mean values we had in our dataset will remain unchanged over the next fiscal quarter. Using Root Mean Square error as our metric of choice, we had a value of 0.0103 (1.03%) variation in ROI for this model. This model did not satisfy our questions concerning volatility in the real estate market.
 
 
 ### First Model
-The first model is an ARIMA model(incorporating Walk-forward modelling). Using the most recent ROIs, we ran a forecast to have an idea of the expected ROIs on the zipcodes in our dataset over the next financial quarter. This model takes into consideration the property values in previous lags (times periods) and trends or seasonality effects over the same periods. Of note is the 2008 Housing Bust which could potentially distort the forecast of the best designed model. We arrived at Delaware as the state with the highest ROI, New Castle County and the five best performing cities in the county as potential locations of choice. This model had an RMSE of 0.00725 (~0.73%). While this model is significantly more reliable than the baseline model, we designed a second to overcome any shortcomings we had with this model.
-![](Figures/model1_Bear_ROI.png)
+The first model is an ARIMA model(incorporating Walk-forward modeling). Using the most recent ROIs, we ran a forecast to have an idea of the expected ROIs on the cities in our dataset over the next financial quarter. This model takes into consideration the property values in previous lags (times periods) and trends or seasonality effects over the same periods. Of note is the 2008 Housing Bust which could potentially distort the forecast of the best designed model. We arrived at Delaware as the state with the highest ROI, New Castle County and the five best performing cities in the county as potential locations of choice. This model had an RMSE of 0.00725 (~0.73%) variation in ROI. While this model is significantly more reliable than the baseline model, we designed a second to overcome any shortcomings we had with city selection in this model.
+![Time series predictions for Bear, DE](Figures/model1_Bear_ROI.png)
 
 ### Second Model
-Our second model took a different approach from the first, but also incorporates the walk-forward optimization. This time we used a tiered system to pick locations from the first model. This model produced better results than the first model, and is computationally less-intensive. The model predicted Stapleton, Baldwin AL as the best-performing city nationwide with a mean ROI of 4.7% over the next fiscal quarter. However, we could not adopt the results of this model because it came in late.
+This model uses a tiered system to pick locations. The highest valued projected ROI for the next quarter of 5% in Stapleton is higher than our previous model's estimation in Bear. The underlying model itself is the same as model 1, so we expect the RMSE of this model to be approximately the same as the first model. For future models of this type, we would like to try an auto-arima model function that varies the hyperparameters as needed for each iteration the model is run. We expect a model run this way to be more accurate with its results, but we do not expect the resulting outcome to change significantly. We could not adopt the results of this model because it came in late.
 
-![](Figures/model2_Stapleton_ROI.png)
+![Time series predictions for Stapleton, AL](Figures/model2_Stapleton_ROI.png)
 
 ## Conclusions:
 In conclusion, we are recommending the following:
@@ -45,3 +48,4 @@ In conclusion, we are recommending the following:
 Looking forward, we would like to incorporate the following into our model as we feel these can give us some more insight:
 - The market volume 
 - Operating costs and overheads
+- Using the second model or recommended third model with autoarima methods.
